@@ -29,7 +29,7 @@ export class TestModule { }
 
 ## Usage
 
-To use the drag and drop you need to add `<drag-and-drop>` into your template.
+To use the drag and drop you need to add `<ngx-drag-and-drop>` into your template.
 This component accepts `multiple` as flag (by default `true`) to allow multiple files upload or single file upload.
 The file browser allow only one file at the time anyway.
 

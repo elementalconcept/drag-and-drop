@@ -1,7 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'drag-and-drop',
+  selector: 'ngx-drag-and-drop',
   templateUrl: './drag-and-drop.component.html',
   styleUrls: [ './drag-and-drop.component.scss' ]
 })
