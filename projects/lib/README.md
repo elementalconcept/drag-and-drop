@@ -7,25 +7,19 @@ Use this library if you need a simple `drag and drop` solution. The library will
 With npm:
 
 ```Shell
-npm i @elemental/drag-and-drop
+npm i @elemental-concept/ngx-drag-and-drop
 ```
 
-With Yarn:
-
-```Shell
-yarn add @elemental/drag-and-drop
-```
-
-Simply add the `import` into the component or add `DragAndDropModule` to the `xx.module.ts` to be able to use it.
+Simply add the `import` into the component or add `NgxDragAndDropModule` to the `xx.module.ts` to be able to use it.
 
 ```typescript
-import { DragAndDropModule } from '@elemental/drag-and-drop';
+import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
 
 @NgModule({
   declarations: [ ... ],
   imports: [
     ...,
-  DragAndDropModule
+  NgxDragAndDropModule
   ],
   providers: [ ],
   bootstrap: [ ... ]

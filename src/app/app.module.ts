@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { DragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
+import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
 
-    DragAndDropModule
+    NgxDragAndDropModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

@@ -18,5 +18,5 @@ import { DragAndDropComponent } from './components/drag-and-drop/drag-and-drop.c
     DragAndDropComponent
   ]
 })
-export class DragAndDropModule {
+export class NgxDragAndDropModule {
 }
