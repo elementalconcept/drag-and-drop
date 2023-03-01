@@ -17,7 +17,7 @@ import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
 
 @NgModule({
   imports: [
-    NgxDragAndDropModule 
+    NgxDragAndDropModule
   ]
 })
 export class TestModule {

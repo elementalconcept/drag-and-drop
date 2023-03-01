@@ -1,27 +1,83 @@
-# NgxDragAndDrop
+# Drag And Drop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.
 
-## Development server
+| Last version | Angular Versions       | Node | Typescript |
+|--------------|------------------------|------|------------|
+| `1.0.0`      | 9+ up to 15 (included) | 14   | 4.6        |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠 Installation
 
-## Code scaffolding
+- With **npm**: `npm i --save @elemental-concept/ngx-random-id`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add `NgxDragAndDropModule` to your `Module` imports section.
 
-## Build
+```typescript
+import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  imports: [
+    NgxDragAndDropModule 
+  ]
+})
+export class TestModule {
+}
+```
 
-## Running unit tests
+## 📖 Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- To use the drag and drop you need to add `<ngx-drag-and-drop>` into your template.
+- This component accepts `multiple` as flag (by default `true`) to allow multiple files upload or single file upload.
+- The file browser allow **only one** file at the time.
 
-## Running end-to-end tests
+When files are dropped into the `dropZone` the `@Output fileDropped` will send a `File[]` object as event.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```html
+<ngx-drag-and-drop (fileDropped)="onFileUpload($event)">
+  <mat-icon>cloud_upload</mat-icon>
+  <h4>
+    Drag and drop your files
+    <br>or<br>
+    Click to browse your files
+  </h4>
+</ngx-drag-and-drop>
 
-## Further help
+<div class="files-list" *ngIf="files.length > 0">
+  <h4>List of file names</h4>
+  <div class="file" *ngFor="let fileName of files">{{  fileName }}</div>
+</div>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```typescript
+@Component({
+  selector: 'app-drag-and-drop-page',
+  template: './drag-and-drop-page.component.html',
+  styleUrls: [ './drag-and-drop-page.component.scss' ]
+})
+export class DragAndDropPageComponent {
+  files: string[] = [];
+
+  onFileUpload = (files: File[]) => {
+    this.files = files.map(file => file.name);
+  };
+}
+```
+
+The component contain a hidden input and uses the `dropZone` directive in the main container.
+Inside the main container there's a `<ng-content></ng-content>` to allow any kind of info presentation.
+
+## Style
+
+To change the css style just use css variables into your main `style.scss` file.
+Here you can find the default values:
+
+```scss
+:root {
+  --drag-and-drop-height: auto;
+  --drag-and-drop-width: 400px;
+  --drag-and-drop-padding: 12px 16px;
+  --drag-and-drop-border: dashed 1px #6091dc;
+  --drag-and-drop-margin: 0 auto;
+  --drag-and-drop-background: #a0cee0;
+}
+```
