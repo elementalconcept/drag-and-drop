@@ -2,48 +2,45 @@
 
 Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.
 
-## Installation
+| Last version | Angular Versions       | Node | Typescript |
+|--------------|------------------------|------|------------|
+| `1.0.0`      | 9+ up to 15 (included) | 14   | 4.6        |
 
-With npm:
+## 🛠 Installation
 
-```Shell
-npm i @elemental-concept/ngx-drag-and-drop
-```
+- With **npm**: `npm i --save @elemental-concept/ngx-random-id`
 
-Simply add the `import` into the component or add `NgxDragAndDropModule` to the `xx.module.ts` to be able to use it.
+Add `NgxDragAndDropModule` to your `Module` imports section.
 
 ```typescript
 import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
 
 @NgModule({
-  declarations: [ ... ],
   imports: [
-    ...,
-  NgxDragAndDropModule
-  ],
-  providers: [ ],
-  bootstrap: [ ... ]
+    NgxDragAndDropModule 
+  ]
 })
-export class TestModule { }
+export class TestModule {
+}
 ```
 
-## Usage
+## 📖 Usage
 
-To use the drag and drop you need to add `<ngx-drag-and-drop>` into your template.
-This component accepts `multiple` as flag (by default `true`) to allow multiple files upload or single file upload.
-The file browser allow only one file at the time anyway.
+- To use the drag and drop you need to add `<ngx-drag-and-drop>` into your template.
+- This component accepts `multiple` as flag (by default `true`) to allow multiple files upload or single file upload.
+- The file browser allow **only one** file at the time.
 
 When files are dropped into the `dropZone` the `@Output fileDropped` will send a `File[]` object as event.
 
 ```html
-<drag-and-drop (fileDropped)="onFileUpload($event)">
+<ngx-drag-and-drop (fileDropped)="onFileUpload($event)">
   <mat-icon>cloud_upload</mat-icon>
   <h4>
     Drag and drop your files
     <br>or<br>
     Click to browse your files
   </h4>
-</drag-and-drop>
+</ngx-drag-and-drop>
 
 <div class="files-list" *ngIf="files.length > 0">
   <h4>List of file names</h4>
@@ -72,13 +69,15 @@ Inside the main container there's a `<ng-content></ng-content>` to allow any kin
 ## Style
 
 To change the css style just use css variables into your main `style.scss` file.
-Here the default values:
+Here you can find the default values:
 
 ```scss
 :root {
-  --drag-and-drop-height: 200px;
-  --drag-and-drop-padding: 24px;
-  --drag-and-drop-border: dashed 1px lightgray;
+  --drag-and-drop-height: auto;
+  --drag-and-drop-width: 400px;
+  --drag-and-drop-padding: 12px 16px;
+  --drag-and-drop-border: dashed 1px #6091dc;
   --drag-and-drop-margin: 0 auto;
+  --drag-and-drop-background: #a0cee0;
 }
 ```
