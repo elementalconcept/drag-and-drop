@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DragAndDropComponent } from './drag-and-drop.component';
 
@@ -13,10 +13,10 @@ describe('DragAndDropComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DragAndDropComponent ],
-      schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
+      declarations: [DragAndDropComponent],
+      schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -31,7 +31,7 @@ describe('DragAndDropComponent', () => {
   });
 
   it('should handle multiple files', () => {
-    const fileList = createMockFileList([ mockPDF, mockPDF ]);
+    const fileList = createMockFileList([mockPDF, mockPDF]);
     spyOn(component.fileDropped, 'emit').and.callThrough();
 
     component.fileBrowseHandler(fileList);
@@ -45,8 +45,8 @@ describe('DragAndDropComponent', () => {
   });
 
   it('should handle simple files', () => {
-    const fileList = createMockFileList([ mockPDF, mockPDF ]);
-    const singleFileList = createMockFileList([ mockPDF ]);
+    const fileList = createMockFileList([mockPDF, mockPDF]);
+    const singleFileList = createMockFileList([mockPDF]);
     spyOn(component.fileDropped, 'emit').and.callThrough();
 
     component.multiple = false;

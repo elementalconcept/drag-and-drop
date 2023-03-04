@@ -4,26 +4,28 @@ import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@ang
   selector: '[dropZone]'
 })
 export class DropZoneDirective {
-  @HostBinding('class.fileover') fileOver: boolean;
+  @HostBinding('class.fileover')
+  fileOver: boolean;
 
-  @Output() fileDropped = new EventEmitter();
+  @Output()
+  fileDropped = new EventEmitter();
 
   // Dragover listener
-  @HostListener('dragover', [ '$event' ])
+  @HostListener('dragover', ['$event'])
   onDragOver(event): void {
     this.preventDefaults(event);
     this.fileOver = true;
   }
 
   // Dragleave listener
-  @HostListener('dragleave', [ '$event' ])
+  @HostListener('dragleave', ['$event'])
   onDragLeave(event): void {
     this.preventDefaults(event);
     this.fileOver = false;
   }
 
   // Drop listener
-  @HostListener('drop', [ '$event' ])
+  @HostListener('drop', ['$event'])
   ondrop(event): void {
     this.preventDefaults(event);
     this.fileOver = false;
@@ -39,7 +41,7 @@ export class DropZoneDirective {
     }
   }
 
-  private preventDefaults = (event) => {
+  private preventDefaults = event => {
     event.preventDefault();
     event.stopPropagation();
   };

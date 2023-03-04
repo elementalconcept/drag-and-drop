@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@elemental-concept/ngx-drag-and-drop": [
+      "@elemental-concept/drag-and-drop": [
         "dist/lib"
       ]
     },

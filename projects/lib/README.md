@@ -3,21 +3,21 @@
 Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.
 
 | Last version | Angular Versions       | Node | Typescript |
-|--------------|------------------------|------|------------|
+| ------------ | ---------------------- | ---- | ---------- |
 | `1.0.0`      | 9+ up to 15 (included) | 14   | 4.6        |
 
 ## 🛠 Installation
 
 - With **npm**: `npm i --save @elemental-concept/ngx-random-id`
 
-Add `NgxDragAndDropModule` to your `Module` imports section.
+Add `DragAndDropModule` to your `Module` imports section.
 
 ```typescript
-import { NgxDragAndDropModule } from '@elemental-concept/ngx-drag-and-drop';
+import { DragAndDropModule } from '@elemental-concept/drag-and-drop';
 
 @NgModule({
   imports: [
-    NgxDragAndDropModule
+    DragAndDropModule
   ]
 })
 export class TestModule {
@@ -26,21 +26,21 @@ export class TestModule {
 
 ## 📖 Usage
 
-- To use the drag and drop you need to add `<ngx-drag-and-drop>` into your template.
+- To use the drag and drop you need to add `<drag-and-drop>` into your template.
 - This component accepts `multiple` as flag (by default `true`) to allow multiple files upload or single file upload.
 - The file browser allow **only one** file at the time.
 
 When files are dropped into the `dropZone` the `@Output fileDropped` will send a `File[]` object as event.
 
 ```html
-<ngx-drag-and-drop (fileDropped)="onFileUpload($event)">
+<drag-and-drop (fileDropped)="onFileUpload($event)">
   <mat-icon>cloud_upload</mat-icon>
   <h4>
     Drag and drop your files
     <br>or<br>
     Click to browse your files
   </h4>
-</ngx-drag-and-drop>
+</drag-and-drop>
 
 <div class="files-list" *ngIf="files.length > 0">
   <h4>List of file names</h4>
@@ -52,7 +52,7 @@ When files are dropped into the `dropZone` the `@Output fileDropped` will send a
 @Component({
   selector: 'app-drag-and-drop-page',
   template: './drag-and-drop-page.component.html',
-  styleUrls: [ './drag-and-drop-page.component.scss' ]
+  styleUrls: ['./drag-and-drop-page.component.scss']
 })
 export class DragAndDropPageComponent {
   files: string[] = [];

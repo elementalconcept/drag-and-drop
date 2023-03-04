@@ -1,5 +1,5 @@
-import { DropZoneDirective } from './drop-zone.directive';
 import { createFileFromMockFile, mockPDF } from '../mocks/file.mock';
+import { DropZoneDirective } from './drop-zone.directive';
 
 describe('DropZoneDirective', () => {
   it('should create an instance', () => {
@@ -40,7 +40,7 @@ describe('DropZoneDirective', () => {
     const event = {
       preventDefault: () => {},
       stopPropagation: () => {},
-      dataTransfer: { files: [ file, file, file ] }
+      dataTransfer: { files: [file, file, file] }
     };
 
     spyOn(event, 'preventDefault').and.callThrough();
@@ -48,7 +48,7 @@ describe('DropZoneDirective', () => {
     spyOn(directive.fileDropped, 'emit').and.callThrough();
 
     directive.ondrop(event);
-    expect(directive.fileDropped.emit).toHaveBeenCalledWith([ file, file, file ]);
+    expect(directive.fileDropped.emit).toHaveBeenCalledWith([file, file, file]);
     expect(event.preventDefault).toHaveBeenCalled();
     expect(event.stopPropagation).toHaveBeenCalled();
   });

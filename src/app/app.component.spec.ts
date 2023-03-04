@@ -6,7 +6,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   });
 
@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ngx-drag-and-drop'`, () => {
+  it(`should have as title 'drag-and-drop'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ngx-drag-and-drop');
+    expect(app.title).toEqual('drag-and-drop');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ngx-drag-and-drop app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('drag-and-drop app is running!');
   });
 });

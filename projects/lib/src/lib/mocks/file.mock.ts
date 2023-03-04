@@ -11,10 +11,10 @@ export const mockPDF: MockFile = {
 };
 
 export const createFileFromMockFile = (file: MockFile): File => {
-  const blob = new Blob([ file.body ], { type: file.mimeType }) as any;
+  const blob = new Blob([file.body], { type: file.mimeType }) as any;
 
-  blob[ 'lastModifiedDate' ] = new Date();
-  blob[ 'name' ] = file.name;
+  blob['lastModifiedDate'] = new Date();
+  blob['name'] = file.name;
 
   return blob as File;
 };
@@ -23,11 +23,11 @@ export const createMockFileList = (files: MockFile[]): FileList => {
   const fileList: FileList = {
     length: files.length,
     item(index: number): File {
-      return fileList[ index ];
+      return fileList[index];
     }
   };
 
-  files.forEach((file, index) => fileList[ index ] = createFileFromMockFile(file));
+  files.forEach((file, index) => fileList[index] = createFileFromMockFile(file));
 
   return fileList;
 };

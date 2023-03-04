@@ -1,16 +1,19 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'ngx-drag-and-drop',
+  selector: 'drag-and-drop',
   templateUrl: './drag-and-drop.component.html',
-  styleUrls: [ './drag-and-drop.component.scss' ]
+  styleUrls: ['./drag-and-drop.component.scss']
 })
 export class DragAndDropComponent {
-  @ViewChild('fileDropRef', { static: false }) fileDropEl: ElementRef<HTMLInputElement>;
+  @ViewChild('fileDropRef', { static: false })
+  fileDropEl: ElementRef<HTMLInputElement>;
 
-  @Input() multiple = true;
+  @Input()
+  multiple = true;
 
-  @Output() fileDropped: EventEmitter<File[]> = new EventEmitter();
+  @Output()
+  fileDropped: EventEmitter<File[]> = new EventEmitter();
 
   private files: File[];
 
@@ -23,10 +26,10 @@ export class DragAndDropComponent {
     this.files = [];
 
     if (this.multiple === false) {
-      this.files.push(files[ 0 ]);
+      this.files.push(files[0]);
     } else {
       for (let i = 0; i <= files.length - 1; i++) {
-        this.files.push(files[ i ]);
+        this.files.push(files[i]);
       }
     }
 

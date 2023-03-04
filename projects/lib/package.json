@@ -1,10 +1,10 @@
 {
-  "name": "@elemental-concept/ngx-drag-and-drop",
+  "name": "@elemental-concept/drag-and-drop",
   "version": "1.0.0",
   "description": "Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elementalconcept/ngx-drag-and-drop.git"
+    "url": "git+https://github.com/elementalconcept/drag-and-drop.git"
   },
   "keywords": [
     "drag and drop",
@@ -14,9 +14,9 @@
   "author": "Elemental Concept",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/elementalconcept/ngx-drag-and-drop/issues"
+    "url": "https://github.com/elementalconcept/drag-and-drop/issues"
   },
-  "homepage": "https://github.com/elementalconcept/ngx-drag-and-drop#readme",
+  "homepage": "https://github.com/elementalconcept/drag-and-drop#readme",
   "peerDependencies": {
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0"
