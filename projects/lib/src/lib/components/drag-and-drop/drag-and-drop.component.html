@@ -1,0 +1,4 @@
+<div (fileDropped)="fileDroppedHandler($event)" dropZone class="drag-and-drop-container">
+  <input (change)="fileBrowseHandler($event)" #fileDropRef id="fileDropRef" type="file"/>
+  <ng-content></ng-content>
+</div>

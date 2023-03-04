@@ -4,11 +4,11 @@ Use this library if you need a simple `drag and drop` solution. The library will
 
 | Last version | Angular Versions       | Node | Typescript |
 | ------------ | ---------------------- | ---- | ---------- |
-| `1.0.1`      | 9+ up to 15 (included) | 14   | 4.6        |
+| `1.0.0`      | 9+ up to 15 (included) | 14   | 4.6        |
 
 ## 🛠 Installation
 
-- With **npm**: `npm i --save @elemental-concept/drag-and-drop`
+- With **npm**: `npm i --save @elemental-concept/ngx-random-id`
 
 Add `DragAndDropModule` to your `Module` imports section.
 
