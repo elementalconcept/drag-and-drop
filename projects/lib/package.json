@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/elementalconcept/drag-and-drop#readme",
   "peerDependencies": {
-    "@angular/common": "^16.0.2",
-    "@angular/core": "^16.0.2"
+    "@angular/common": ">= 9 < 17",
+    "@angular/core": ">= 9 < 17"
   },
   "dependencies": {
     "tslib": "^2.3.0"
