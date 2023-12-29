@@ -1,6 +1,6 @@
 {
   "name": "@elemental-concept/drag-and-drop",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.",
   "repository": {
     "type": "git",
@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/elementalconcept/drag-and-drop#readme",
   "peerDependencies": {
-    "@angular/common": ">= 13 < 17",
-    "@angular/core": ">= 13 < 17"
+    "@angular/common": ">= 13 < 18",
+    "@angular/core": ">= 13 < 18"
   },
   "dependencies": {
     "tslib": "^2.3.0"

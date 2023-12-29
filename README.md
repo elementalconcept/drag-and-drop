@@ -2,10 +2,7 @@
 
 Use this library if you need a simple `drag and drop` solution. The library will return a list of files `File[]`.
 
-| Last version | Angular Versions       | Node | Typescript |
-|--------------|------------------------|------|------------|
-| `1.1.1`      | 9+ up to 15 (included) | 14   | 4.6        |
-| `16.0.0`     | 13 up to 16 (included) | 16   | 5.1        |
+[![npm version](https://badge.fury.io/js/%40elemental-concept%2Fdrag-and-drop.svg)](https://badge.fury.io/js/%40elemental-concept%2Fdrag-and-drop)
 
 ## 🛠 Installation
 
