@@ -1,7 +1,8 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
 
 @Directive({
-  selector: '[dropZone]'
+    selector: '[dropZone]',
+    standalone: false
 })
 export class DropZoneDirective {
   @HostBinding('class.fileover')

@@ -1,9 +1,10 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'drag-and-drop',
-  templateUrl: './drag-and-drop.component.html',
-  styleUrls: ['./drag-and-drop.component.scss']
+    selector: 'drag-and-drop',
+    templateUrl: './drag-and-drop.component.html',
+    styleUrls: ['./drag-and-drop.component.scss'],
+    standalone: false
 })
 export class DragAndDropComponent {
   @ViewChild('fileDropRef', { static: false })
